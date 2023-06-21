@@ -53,3 +53,34 @@
 .add-to-cart-btn:focus {
   opacity: 0.8;
 }
+
+.cart-link-container {
+  display: inline-block;
+  position: relative;
+}
+
+.total-cart-items {
+  text-decoration: none;
+  color: #fff;
+  background-color: #084597;
+  text-align: center;
+  position: absolute;
+  padding: 5px 8px;
+  border-radius: 50%;
+  bottom: -12px;
+  right: -5px;
+}
+
+/*
+
+.cart-link-container::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px solid #f79813;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: -9px;
+  background-color: #f79813;
+}*/
