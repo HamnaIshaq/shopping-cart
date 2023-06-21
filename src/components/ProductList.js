@@ -1,7 +1,15 @@
 import Product from "./Product";
 
-const ProductList = ({ data, cartItems, setCartItems }) => {
+const ProductList = ({
+  data,
+  cartItems,
+  setCartItems,
+  totalCartItems,
+  setTotalCartItems,
+}) => {
   function onClickAddToCartBtn(productId, productImg, productTitle) {
+    setTotalCartItems(totalCartItems + 1);
+
     const item = {
       id: productId,
       title: productTitle,
@@ -10,24 +18,26 @@ const ProductList = ({ data, cartItems, setCartItems }) => {
     };
 
     if (cartItems.length) {
-      const existingCartItem = cartItems.filter(
+      const productExistsInArr = cartItems.some(
         (item) => item.id === productId
       );
 
-      if (existingCartItem.length) {
-        existingCartItem[0].amount++;
-        const uniqueCartItems = cartItems.filter(
-          (item) => item.id !== productId
-        );
-        const updatedCartItems = uniqueCartItems.concat(existingCartItem);
-        setCartItems(updatedCartItems);
+      if (productExistsInArr) {
+        const tempArr = cartItems;
+
+        tempArr.forEach((item) => {
+          if (item.id === productId) {
+            item.amount++;
+          }
+        });
+        setCartItems(tempArr);
         return;
       }
       setCartItems([...cartItems, item]);
       return;
     }
     setCartItems([...cartItems, item]);
-    return item;
+    return;
   }
 
   return (
