@@ -5,14 +5,17 @@ import { data } from "../../data/data";
 
 const Home = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [totalCartItems, setTotalCartItems] = useState(0);
 
   return (
     <>
-      <Header />
+      <Header totalCartItems={totalCartItems} />
       <ProductList
         data={data}
         cartItems={cartItems}
         setCartItems={setCartItems}
+        totalCartItems={totalCartItems}
+        setTotalCartItems={setTotalCartItems}
       />
     </>
   );
