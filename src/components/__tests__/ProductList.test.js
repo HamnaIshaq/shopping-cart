@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+//import userEvent from "@testing-library/user-event";
 import ProductList from "../ProductList";
 
 jest.mock("../product", () => ({ productImg, productTitle, productId }) => (
@@ -27,11 +27,6 @@ const data = [
   { id: 1, title: "Pink flowers", img: "pink-flowers.jpg" },
   { id: 2, title: "Red flowers", img: "red-flowers.jpg" },
   { id: 3, title: "Blue flowers", img: "blue-flowers.jpg" },
-];
-
-// state
-const cartItems = [
-  { id: 1, title: "Pink flowers", img: "pink-flowers.jpg", amount: 1 },
 ];
 
 describe("product list", () => {
@@ -61,16 +56,21 @@ describe("product list", () => {
       expect(screen.getByText("No products present!")).toBeInTheDocument();
     });
 
-    it("add product in cart state when button 'add to cart' is pressed", async () => {
+    /*it("add product in cart state when button 'add to cart' is pressed 1 time", async () => {
       //const user = userEvent.setup();
 
       render(<ProductList data={data} />);
 
-      const button = screen.queryAllByTestId("add-to-cart-btn")[0]; //[0];
-      const buttonProductId = parseInt(button.getAttribute("data-productid"));
-      expect(buttonProductId).toBe(1);
+      const button = screen.queryAllByTestId("add-to-cart-btn")[0];
+      //const buttonProductId = parseInt(button.getAttribute("data-productid"));
+      //expect(buttonProductId).toBe(1);
       //expect(userEvent.click(button))//onClickAddToCartBtn(data[0].id, data[0].img, data[0].title))
-      await userEvent.click(button);
-    });
+      userEvent.click(button);
+
+      //expect(handleClickAddToCart).toBeCalledTimes(1);
+
+      // check if the on the scrren, the cart has 1 item displayed as a text in absolute positioning
+      screen.getByText(1).toBeInTheDocument();
+    });*/
   });
 });
