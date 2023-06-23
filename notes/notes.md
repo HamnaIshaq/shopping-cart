@@ -20,12 +20,13 @@
 - src
   - components
     - --tests-- folder
-    - Header.js (shows logo and cart button)
-    - ProductImage.js (show single product image with add cart button)
+    - test components files
   - pages
     - Home.js
       use Header.js and ProductImage.js to show home page
       loop through the product images and show product image using the ProductImage.js component
+    - Cart.js
+      show items added in the cart
   - App.js
   - index.js
 
@@ -34,4 +35,4 @@
 - product list
   - is an array of products rendered correctly on the screen
   - if the array of products is not provided, is a message is returned that says "no products"
-  - when "add to cart" btn is clicked, a function is run which adds clicked product to the state named "cartProducts",
+  - when "add to cart" btn is clicked, a function is run which adds clicked product to the state named "cartProducts" (test on hold for now)
