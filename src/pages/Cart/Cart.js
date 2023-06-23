@@ -1,9 +1,9 @@
 import Header from "../../components/Header";
 
-const Cart = () => {
+const Cart = ({ totalCartItems }) => {
   return (
     <>
-      <Header />
+      <Header totalCartItems={totalCartItems} />
       <div>Cart</div>
     </>
   );
