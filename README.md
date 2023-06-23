@@ -7,6 +7,8 @@ Shopping cart project to practice
 
 ## Attribution
 
+<a href="https://code.tutsplus.com/articles/the-best-way-to-deep-copy-an-object-in-javascript--cms-39655">The best way to deep copy an object in javascript</a>
+
 <a href="https://www.flaticon.com/free-icons/abstract" title="abstract icons">Abstract icons created by Roundicons - Flaticon</a>
 
 <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping cart icons">Shopping cart icons created by Roundicons Premium - Flaticon</a>
