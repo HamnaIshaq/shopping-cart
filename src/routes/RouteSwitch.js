@@ -1,16 +1,24 @@
+import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Cart from "../pages/Cart/Cart";
 
 const RouteSwitch = () => {
+  const [totalCartItems, setTotalCartItems] = useState(0);
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: (
+        <Home
+          totalCartItems={totalCartItems}
+          setTotalCartItems={setTotalCartItems}
+        />
+      ),
     },
     {
       path: "/cart",
-      element: <Cart />,
+      element: <Cart totalCartItems={totalCartItems} />,
     },
   ]);
 
