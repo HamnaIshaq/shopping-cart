@@ -5,12 +5,15 @@ import Cart from "../pages/Cart/Cart";
 
 const RouteSwitch = () => {
   const [totalCartItems, setTotalCartItems] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <Home
+          cartItems={cartItems}
+          setCartItems={setCartItems}
           totalCartItems={totalCartItems}
           setTotalCartItems={setTotalCartItems}
         />
@@ -18,7 +21,14 @@ const RouteSwitch = () => {
     },
     {
       path: "/cart",
-      element: <Cart totalCartItems={totalCartItems} />,
+      element: (
+        <Cart
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          totalCartItems={totalCartItems}
+          setTotalCartItems={setTotalCartItems}
+        />
+      ),
     },
   ]);
 

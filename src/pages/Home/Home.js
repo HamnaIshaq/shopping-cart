@@ -3,9 +3,12 @@ import Header from "../../components/Header";
 import ProductList from "../../components/ProductList";
 import { data } from "../../data/data";
 
-const Home = ({ totalCartItems, setTotalCartItems }) => {
-  const [cartItems, setCartItems] = useState([]);
-
+const Home = ({
+  totalCartItems,
+  setTotalCartItems,
+  cartItems,
+  setCartItems,
+}) => {
   return (
     <>
       <Header totalCartItems={totalCartItems} />
