@@ -76,16 +76,26 @@
   right: -5px;
 }
 
-/*
+/* cart styling */
 
-.cart-link-container::after {
-  content: "";
-  width: 15px;
-  height: 15px;
-  border: 1px solid #f79813;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -5px;
-  right: -9px;
-  background-color: #f79813;
-}*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  /*background: #4545;*/
+}
+
+td {
+  vertical-align: middle;
+}
