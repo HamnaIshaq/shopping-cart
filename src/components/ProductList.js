@@ -11,7 +11,8 @@ const ProductList = ({
     productId,
     productImg,
     productTitle,
-    productPrice
+    productPrice,
+    productCurrency
   ) {
     setTotalCartItems(totalCartItems + 1);
 
@@ -37,6 +38,7 @@ const ProductList = ({
           title: productTitle,
           img: productImg,
           price: productPrice,
+          currency: productCurrency,
           amount: 1,
         },
       ];
