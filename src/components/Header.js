@@ -12,7 +12,7 @@ const Header = ({ totalCartItems }) => {
           </Link>
         </div>
         <div className="img-container">
-          <Link to="cart" className="cart-link-container">
+          <Link to="/cart" className="cart-link-container">
             <img className="img" src={Cart} alt="cart" />
             <p className="total-cart-items">{totalCartItems}</p>
           </Link>
