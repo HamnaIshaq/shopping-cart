@@ -10,25 +10,30 @@ const RouteSwitch = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        <Home
-          cartItems={cartItems}
-          setCartItems={setCartItems}
-          totalCartItems={totalCartItems}
-          setTotalCartItems={setTotalCartItems}
-        />
-      ),
-    },
-    {
-      path: "/cart",
-      element: (
-        <Cart
-          cartItems={cartItems}
-          setCartItems={setCartItems}
-          totalCartItems={totalCartItems}
-          setTotalCartItems={setTotalCartItems}
-        />
-      ),
+      children: [
+        {
+          path: "",
+          element: (
+            <Home
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              totalCartItems={totalCartItems}
+              setTotalCartItems={setTotalCartItems}
+            />
+          ),
+        },
+        {
+          path: "cart",
+          element: (
+            <Cart
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              totalCartItems={totalCartItems}
+              setTotalCartItems={setTotalCartItems}
+            />
+          ),
+        },
+      ],
     },
   ]);
 
