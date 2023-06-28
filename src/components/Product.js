@@ -21,7 +21,13 @@ const Product = ({
         type="button"
         data-productid={productId}
         onClick={() =>
-          onClickAddToCartBtn(productId, productImg, productTitle, productPrice)
+          onClickAddToCartBtn(
+            productId,
+            productImg,
+            productTitle,
+            productPrice,
+            productCurrency
+          )
         }
       >
         Add to Card
